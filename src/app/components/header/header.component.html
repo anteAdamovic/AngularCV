@@ -1,0 +1,10 @@
+<div class='header'>
+    <mat-toolbar>
+        <div class='title'>
+            HEADER
+        </div>
+        <div class='navigation'>
+            <button mat-button *ngFor='let link of links' (click)='redirectTo(link)'> {{ capitalize(link) }} </button>
+        </div>
+    </mat-toolbar>
+</div>

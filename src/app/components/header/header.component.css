@@ -1,0 +1,9 @@
+.navigation {
+    height: 100%;
+    float: right;
+    margin-left: auto;
+}
+
+.navigation button {
+    height: 100%;
+}
