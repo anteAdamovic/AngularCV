@@ -1,3 +1,6 @@
 <div class='biography'>
     Biography
+    <p *ngFor='let section of biographyData?.sections'>
+        {{ section.text }}
+    </p>
 </div>

@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
     styleUrls: ['header.component.css']
 })
 export class HeaderComponent {
+    public selected: string;
+
     public links: any[] = [
         'home', 
         'biography',
@@ -18,10 +20,15 @@ export class HeaderComponent {
         'contact'
     ];
 
-    constructor(private router: Router) { }
+    constructor(private router: Router) {
+        this.selected = window.location.pathname.replace('/', '');
+        if (this.selected === '') {
+            this.selected = 'home';
+        }
+    }
 
     public redirectTo(link: string): void {
-        console.log('Redirecting to:', link);
+        this.selected = link;
         this.router.navigateByUrl(link);
     }
 
